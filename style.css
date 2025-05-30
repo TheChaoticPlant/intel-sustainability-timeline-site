@@ -1,0 +1,19 @@
+:root {
+  --primary-color: #3498db; /* Primary color for the theme */
+  --secondary-color: #2ecc71; /* Secondary color for the theme */
+  --text-color: #333; /* Default text color */
+  --background-color: #2f89ff; /* Background color */
+}
+
+body {
+  font-family: Arial, sans-serif; /* Sets the default font */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+  background-color: var(--background-color); /* Applies background color */
+  color: var(--text-color); /* Applies text color */
+}
+
+.logo {
+  height: 50px;   /* Sets the logo height */
+  width: auto;    /* Keeps the logo's aspect ratio */
+}
