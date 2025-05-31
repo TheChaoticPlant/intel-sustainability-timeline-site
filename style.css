@@ -1,16 +1,100 @@
 :root {
-  --primary-color: #3498db; /* Primary color for the theme */
-  --secondary-color: #2ecc71; /* Secondary color for the theme */
+  --primary-color: #00C7FD; /* Primary color for the theme */
+  --secondary-color: #0068B5; /* Secondary color for the theme */
   --text-color: #333; /* Default text color */
-  --background-color: #2f89ff; /* Background color */
+  --background-color: #ffffff; /* Background color */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: Arial, sans-serif; /* Sets the default font */
-  margin: 0; /* Removes default margin */
-  padding: 0; /* Removes default padding */
   background-color: var(--background-color); /* Applies background color */
   color: var(--text-color); /* Applies text color */
+}
+
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 20px;
+  height: 80px;
+
+  background-color: var(--secondary-color);
+  text-decoration: none;
+}
+
+nav img {
+  height: 60px;   /* Sets the logo height */
+  width: auto;    /* Keeps the logo's aspect ratio */
+  padding: 0px; /* Adds padding around the logo */
+}
+
+nav .right a {
+  color: var(--background-color);
+  background-color: var(--primary-color);
+  font-size: large;
+  margin: 0 10px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+nav .right a:last-child {
+  color: var(--background-color);
+  background-color: var(--primary-color);
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px; /* Increased space between text and image */
+  background: var(--background-color);
+  color: var(--text-color);
+  padding: 80px 20px 60px 20px;
+  min-height: 320px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+.hero-content {
+  text-align: left;
+  max-width: 500px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.hero-img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.12);
 }
 
 .timeline-card img {
@@ -19,8 +103,23 @@ body {
   object-fit: cover;
 }
 
-.logo {
-  height: 30px;   /* Sets the logo height */
-  width: auto;    /* Keeps the logo's aspect ratio */
-  padding: 10px; /* Adds padding around the logo */
+.prompt {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 500px;
+  text-align: center;
 }
+
+footer {
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
