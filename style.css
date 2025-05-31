@@ -13,6 +13,12 @@ body {
   color: var(--text-color); /* Applies text color */
 }
 
+.timeline-card img {
+  width: 250px;
+  height: 100px;
+  object-fit: cover;
+}
+
 .logo {
   height: 30px;   /* Sets the logo height */
   width: auto;    /* Keeps the logo's aspect ratio */
