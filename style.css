@@ -90,11 +90,32 @@ nav .right a:last-child {
 }
 
 .hero-img {
-  width: 260px;
-  height: 260px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
-  border-radius: 16px;
+  border-radius: 20px;
   box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+}
+
+main {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: var(--primary-color);
+}
+
+.timeline-title {
+  text-align: center;
+  color: var(--background-color);
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 0;          /* Remove extra space above */
+  margin-bottom: 24px;    /* Space below the title */
+  padding-top: 0;         /* Ensure no extra padding */
+}
+
+.timeline-cards{
+  background-color: var(--primary-color);
 }
 
 .timeline-card img {
@@ -103,14 +124,68 @@ nav .right a:last-child {
   object-fit: cover;
 }
 
+.timeline-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  overflow-x: auto;
+  padding: 40px 0;
+  scroll-snap-type: x mandatory;
+  background-color: var(--primary-color);
+  /* Optional: hide scrollbar for a cleaner look */
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary-color) var(--primary-color);
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+}
+
+.timeline-card {
+  min-width: 320px;
+  max-width: 340px;
+  background: #fff;
+  color: var(--text-color);
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  padding: 24px;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-cards::-webkit-scrollbar {
+  height: 8px;
+  display: none;
+}
+.timeline-cards::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 4px;
+}
+.timeline-cards::-webkit-scrollbar-track {
+  background: var(--primary-color);
+}
+
 .prompt {
   background-color: var(--primary-color);
   color: var(--background-color);
   padding: 20px;
-  border-radius: 10px;
-  margin: 20px auto;
-  max-width: 500px;
+  border-radius: 0px;
   text-align: center;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+
+/* Apply shake on hover */
+.prompt:hover {
+  animation: shake 0.4s;
 }
 
 footer {
